@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-  <p id="choice">ここに日時を表示します</p>
+  <p id="output"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -30,8 +30,26 @@
 <script>
   'use strict';
 
-  let answer = window.prompt('ヘルプをみますか？');
-  console.log(answer);
+  window.alert('FizzBuzzゲームを開始します');
+  window.alert('コンソールを見てね');
+
+  function fizzbuzz(i) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      return 'FizzBuzz!!yeah!!';
+    } else if((i % 5) === 0) {
+      return 'Buzz!!yeah!!';
+    } else if((i % 3) === 0) {
+      return 'Fizz!!yeah!!';
+    } else {
+      return 'oh no...' + i
+    }
+  }
+
+  let i = 1;
+  while(i <= 30) {
+    console.log(fizzbuzz(i));
+    i += 1;
+  }
 </script>
 </body>
 </html>
