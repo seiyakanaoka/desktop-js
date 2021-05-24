@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,7 +18,14 @@
 <main>
 <div class="container">
 <section>
-  <ul id="list"></ul>
+  <form id="form">
+    <select name="select">
+      <option value="index.html">日本語</option>
+      <option value="index-en.html">English</option>
+      <option value="index-zh.html">中国語</option>
+    </select>
+  </form>
+  <h2>English Page</h2>
 </section>
 </div><!-- /.container -->
 </main>
@@ -27,14 +34,6 @@
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
-<script>
-  'use strict';
-  let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
-  todo.push('歯医者に行く');
-  for(let item of todo) {
-    const li = `<li>${item}</li>`;
-      document.getElementById('list').insertAdjacentHTML('beforeend', li);
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
