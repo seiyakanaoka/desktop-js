@@ -18,7 +18,7 @@
 <main>
 <div class="container">
 <section>
-  <ul id="list"></ul>
+  <p>最終アクセス日時：<span id="time"></span></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -29,12 +29,25 @@
 </footer>
 <script>
   'use strict';
-  let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
-  todo.push('歯医者に行く');
-  for(let item of todo) {
-    const li = `<li>${item}</li>`;
-      document.getElementById('list').insertAdjacentHTML('beforeend', li);
+
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const date = now.getDate();
+  const hour = now.getHours();
+  const min = now.getMinutes();
+
+
+  let hours = '';
+  if(hour < 12) {
+    hours = 'am';
+  }  else {
+    hours = 'pm';
   }
+
+
+  const output = `${year}/${month + 1}/${date} ${hour % 12}:${min} ${hours}`;
+  document.getElementById('time').textContent = output;
 </script>
 </body>
 </html>
