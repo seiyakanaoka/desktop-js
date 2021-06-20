@@ -17,7 +17,14 @@
       </header>
       <main>
        <section>
-         <p id="choice">ここに日時を表示します</p>
+         <!-- <p id="output">ここに日時を表示します</p>
+         <h1>やることリスト</h1>
+         <ul id="list"></ul> -->
+         <form action="#" id="form">
+           <input type="text" name="word">
+           <input type="submit" value="検索">
+         </form>
+         <p id="output"></p>
        </section>
       </main>
       <footer>
@@ -73,11 +80,88 @@
         //   window.alert('お弁当はいかがですか？');
         // }
 
-        let i = 1;
-        while(i <= 10) {
-          console.log(i);
-          i += 1;
-        }
+        // window.alert ('モンスターが現れた！体力は100のようだ。');
+        // window.alert ('戦闘準備・・・');
+        // let monster = 100;
+        // let count = 0
+        // while(monster >= 0) {
+        //   let i = Math.floor(Math.random() * 30) + 1;
+        //   window.alert('モンスターに' + i + 'のダメージ！');
+        //   monster -= i;
+        //   window.alert('モンスターの体力は残り' + monster + 'だ！');
+        //   count += 1;
+        // }
+        // window.alert ('モンスターを撃破！' + count + '回で倒した！');
+        // window.alert ('勇者の旅は続く・・・');
+
+        // function total(price) {
+        //   const tax = 0.1;
+        //   return price + price * tax;
+        // }
+        // console.log('コーヒーメーカの値段は' + total(8000) + '円（税込）です');
+        // document.getElementById('output').textContent = 'コーヒーメーカーの値段は' + total(8000) + '円（税込）です。';
+
+        // function fizzbuzz(num) {
+        //   if (num % 3 === 0 && num % 5 === 0) {
+        //     return 'fizzbuzz';
+        //   } else if (num  % 3 === 0) {
+        //     return 'fizz';
+        //   } else if (num % 5 === 0) {
+        //     return 'buzz';
+        //   } else return num;
+        // }
+        // // window.alert('これよりfizzbuzzゲームを開始します');
+        // // window.alert('好きな数字を入力してください');
+        // // fizzbuzz(window.prompt());
+
+        // let i = 1
+        // while (i <= 30) {
+        //   console.log(fizzbuzz(i));
+        //   i += 1;
+        // }
+
+        // let todo = ['デザインカンプ作成', 'データ整理', '勉強会申し込み', '牛乳買う'];
+        // todo.push('歯医者に行く');
+        // for(let item of todo) {
+        //   const li = `<li>${item}</li>`
+        //   document.getElementById('list').insertAdjacentHTML('beforeend', li)
+        // }
+        document.getElementById('form').onsubmit = function() {
+          event.preventDefault();
+          const search = document.getElementById('form').word.value;
+          document.getElementById('output').textContent = `「${search}の検索中・・・」`;
+        };
       </script>
     </body>
   </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
