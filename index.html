@@ -33,12 +33,20 @@
 
     <script>
       'use strict';
-      let ans = window.confirm('ゲームを開始しますか？');
-      if(ans === true) {
-        document.getElementById('choice').textContent = 'いざ出陣！';
+      let i = 0;
+      while(i < 1) {
+        const answer = window.prompt('ヘルプを見ますか？');
+        if(answer === 'yes') {
+        window.alert('タップでジャンプ。障害物を避けます。');
+        i += 1;
+      } else if(answer === 'no') {
+        window.alert('ゲーム起動中...');
+        i += 1;
       } else {
-        document.getElementById('choice').textContent = 'ゲームはしません。';
+        window.alert('yesかnoでお答えください。');
       }
+      }
+      document.getElementById('choice').textContent = 'ループ終了';
     </script>
   </body>
 </html>
