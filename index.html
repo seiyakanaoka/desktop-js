@@ -33,7 +33,12 @@
 
     <script>
       'use strict';
-      document.getElementById('choice').textContent = '通知を受け取りますか？';
+      let ans = window.confirm('ゲームスタート！準備はいい？')
+      if(ans === true) {
+        document.getElementById('choice').textContent = 'ゲームを開始します。';
+      } else {
+        document.getElementById('choice').textContent = 'ゲームを終了します。';
+      }
     </script>
   </body>
 </html>
